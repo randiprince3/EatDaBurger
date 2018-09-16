@@ -21,11 +21,11 @@ $(function() {
         // Make sure to preventDefault on a submit event.
         event.preventDefault();
 
-        var name = $("[name=burger-name]").val().trim();
+        var newName = $("#name").val().trim();
 
         if(name !== "") {
             var newBurger = {
-                name: name
+                burger_name: newName
             };
 
             // Send the POST request.
@@ -39,18 +39,9 @@ $(function() {
             });
         }
         else {
-            $("[name=burger-name]").val("");
+            $("#name").val("");
         }
     });
 
-    $(".delete-sleep").on("click", function(event) {
-        var id = $(this).data("id");
 
-        $.ajax("/api/burgers/" + id, {
-            type: "DELETE"
-        }).then(function() {
-            // Reload the page to get the updated list
-            location.reload();
-        });
-    });  
 });

@@ -5,7 +5,7 @@ var mysql = require("mysql");
 var connection;
 
 if(process.env.JAWSDB_URL) {
-    console.log('\n\n\nHELLLO\n\n\n\n')
+
     connection = mysql.createConnection(process.env.JAWSDB_URL);
 }
 else {
@@ -27,5 +27,5 @@ connection.connect(function(err) {
     console.log("connected as id " + connection.threadId);
 });
 
-// for ORM use
+
 module.exports = connection;
