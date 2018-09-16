@@ -30,9 +30,9 @@ router.post("/api/burgers", function(req, res) {
     console.log(req.body);
     
     burger.create([
-      "burger_name", "devoured"
+      "burger_name"
     ], [
-      req.body.burger_name, req.body.devoured
+      req.body.name
     ], function(result) {
       res.json({ id: result.insertId });
     });
