@@ -4,7 +4,7 @@
         <img src="/assets/img/burger.jpg" alt="burger" class="img-responsive center-block">
     </div>
 
-    <section class="row">
+   <section class="row">
         <div class="col-md-7 col-left">
             <table>
                 {{#each burgers}}
@@ -17,7 +17,7 @@
         <div class="col-md-5 col-right">
             {{#each burgers}}
                 {{#if devoured}}
-                    <div>{{id}}. {{burger_name}}</div>
+                   <div>{{id}}. {{burger_name}}</div>
                 {{/if}}
             {{/each}}        
         </div>          
@@ -30,5 +30,4 @@
         </div>
         <button type="submit">Add Burger</button>
     </form>     
-</div>
 </div>

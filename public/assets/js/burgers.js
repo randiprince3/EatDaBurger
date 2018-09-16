@@ -15,17 +15,19 @@ $(function() {
             // Reload the page to get the updated list
             location.reload();
         });
-    });  
-
-    $("#submit").on("click", function(event) {
+    }); 
+    
+    
+    $(".create-form").on("submit", function(event) {
         // Make sure to preventDefault on a submit event.
         event.preventDefault();
 
-        var newName = $("#name").val().trim();
+        var name = $("[name=burger-name]").val().trim();
 
         if(name !== "") {
             var newBurger = {
-                burger_name: newName
+                name: name,
+                devoured: 0
             };
 
             // Send the POST request.
@@ -33,15 +35,14 @@ $(function() {
                 type: "POST",
                 data: newBurger
             }).then(function() {
-                console.log("created new burger");
+                // console.log("created new burger");
                 // Reload the page to get the updated list
                 location.reload();
             });
         }
         else {
-            $("#name").val("");
+            $("[name=burger-name]").val("");
         }
     });
-
 
 });

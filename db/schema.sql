@@ -3,9 +3,10 @@ CREATE DATABASE burgers_db;
 USE burgers_db;
 
 CREATE TABLE `burgers` (
-  `id` INT AUTO_INCREMENT NOT NULL,
-  `burger_name` VARCHAR(200) NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `burger_name` VARCHAR(255) NOT NULL,
   `devoured` BOOLEAN NOT NULL DEFAULT false,
   `date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 
-  PRIMARY KEY ( `id` ) );
+  PRIMARY KEY ( `id` ) 
+  );
