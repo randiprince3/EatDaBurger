@@ -6,6 +6,7 @@
 
    <section class="row">
         <div class="col-md-7 col-left">
+            <h2>Ready to Eat Burger</h2>
             <table>
                 {{#each burgers}}
                     {{#unless devoured}}
@@ -15,6 +16,7 @@
             </table>
         </div>
         <div class="col-md-5 col-right">
+            <h2>Devoured Burgers</h2>
             {{#each burgers}}
                 {{#if devoured}}
                    <div>{{id}}. {{burger_name}}</div>
